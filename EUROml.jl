@@ -1,5 +1,8 @@
 module EUROml
-    # AI model
+    using DataFrames, CSV
+    using Lux
+
+    # ML model
 
     # App/Website
 end
