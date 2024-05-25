@@ -1,14 +1,13 @@
-# EURO-AI
+# EUROml
 
-AI for prediction of UEFA EURO 2024.
+Machine learning (ML) prediction of UEFA EURO 2024.
 
 ## Database
 
 Based on [this](https://www.kaggle.com/datasets/martj42/international-football-results-from-1872-to-2017?select=results.csv) kaggle database.
 
-## Todos
+## Notes ML Model
 
-* [ ] Implement function to download data
 * [ ] Filter data eventually
 * [ ] Create first neuronal net for predictions and test it by authencity
 * [ ] Implement EURO match plan.
