@@ -1,7 +1,7 @@
 # Load data from results.csv, goalscorers.csv, and shootouts.csv to DataFrames
 function load_data()
     results = CSV.File("data/results.csv") |> DataFrame
-    scorers = CSV.File("data/goalscoreres.csv") |> DataFrame
+    scorers = CSV.File("data/goalscorers.csv") |> DataFrame
     shootouts = CSV.File("data/shootouts.csv") |> DataFrame
 
     return results, scorers, shootouts
@@ -16,7 +16,7 @@ function convert_data(results, scorers, shootouts)
 
     # Filter teams and games (by number of games per team and year)
     teams = unique(vcat(results.home_team, results.away_team))
-    what_valid_year = year(results.date) .≥ min_year
+    what_valid_year = year.(results.date) .≥ min_year
     what_games = deepcopy(what_valid_year)
     for i in 1:20
         println("i: ",i,"; No. teams: ",length(teams))
@@ -31,19 +31,22 @@ function convert_data(results, scorers, shootouts)
         end
     end
 
+    # Filter out games with NA scores
+    what_games = what_games .&& results.home_score .≠ "NA" .&& results.away_score .≠ "NA"
+
     # Assign team IDs
     team2id = Dict(team => i for (i, team) in enumerate(teams))
+    id2team = Dict(i => team for (team, i) in team2id)
 
     # Construct dataset
-    dat = Dataframe(
-        id_home_team = getindex.(Ref(team2id),results.id_home_team),
-        id_away_team = getindex.(Ref(team2id),results.id_away_team),
-        home_score = results.home_score,
-        away_score = results.away_score,
-        date = year.(results.date) .+ dayofyear.(results.date) ./ daysinyear.(results.date),
-        is_friendly = results.tournament .== "Friendly",
+    data = DataFrame(
+        id_home_team = getindex.(Ref(team2id),results.home_team[what_games]),
+        id_away_team = getindex.(Ref(team2id),results.away_team[what_games]),
+        home_score = parse.(Int,results.home_score[what_games]),
+        away_score = parse.(Int,results.away_score[what_games]),
+        date = (year.(results.date) .+ dayofyear.(results.date) ./ daysinyear.(results.date))[what_games],
+        is_friendly = results.tournament[what_games] .== "Friendly",
     )
-
 
     # utils = (;
     #     teams = teams,
@@ -52,5 +55,5 @@ function convert_data(results, scorers, shootouts)
     #     min_year = min_year
     # )    
 
-    return data, team2id
+    return data, id2team
 end
