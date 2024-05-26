@@ -1,8 +1,10 @@
 module EUROml
-    using DataFrames, CSV
-    using Lux
+    using DataFrames, CSV, Dates
+    using Lux, MLUtils, Optimisers, LossFunctions, Zygote, Random
 
     # ML model
+    include("src/model.jl")
+    include("src/load_data.jl")
 
     # App/Website
 end
