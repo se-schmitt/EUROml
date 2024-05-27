@@ -55,5 +55,5 @@ function convert_data(results, scorers, shootouts)
     #     min_year = min_year
     # )    
 
-    return data, id2team
+    return data, team2id, id2team
 end
