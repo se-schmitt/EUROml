@@ -17,10 +17,10 @@ group_matches = [(results.home_team[i],results.away_team[i],(year.(results.date[
 
 hyper_analysis = Dict{Tuple{Int,Int},Tuple}()
 
-name = "hyper_3"
+name = "hyper_5_do_0.1"
 
-for e in [10,100,500], bs = [256,1024]
-    model_i, stats_i = EUROml.train_model(model,data;epochs=e,batch_size=bs,name="DEBUG/$(name)_$(e)_$(bs)")
+for e in [500], bs = [1024]
+    model_i, stats_i, tstate_i = EUROml.train_model(model,data;epochs=e,batch_size=bs,name="DEBUG/$(name)_$(e)_$(bs)")
     
     matches_i = Dict{Tuple{String,String},Tuple{Float64,Float64}}()
     for (team1,team2,date) in group_matches
@@ -28,7 +28,7 @@ for e in [10,100,500], bs = [256,1024]
         matches_i[(team1,team2)] = (y_pred[1,1],y_pred[2,1])
     end
 
-    hyper_analysis[(e,bs)] = (matches_i,model_i,stats_i)
+    hyper_analysis[(e,bs)] = (matches_i,model_i,stats_i,tstate_i)
 
     println(Dates.format(now(), "yyyy-mm-dd HH:MM:SS")," - Epochs: ",e," Batch size: ",bs," Validation loss: ",stats_i.validation.loss[end])
 end

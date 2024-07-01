@@ -27,11 +27,14 @@ Build a neural network model for predicting football scores.
 """
 function build_model(N_teams::Int)
     # Settings
-    N_emb = 4
+    N_emb = 6
 
     return EuroModel(
-        Chain(Embedding(N_teams => N_emb)), 
         Chain(
+            Embedding(N_teams => N_emb)
+        ), 
+        Chain(
+            Dropout(0.1),
             Dense(2*N_emb+2,8,relu),
             Dense(8,4,relu),
             Dense(4,2)
@@ -49,11 +52,15 @@ function compute_loss(model, ps, st, (X,Y))
     lossf_res = ModifiedHuberLoss()
     
     # Calculate loss 
-    diff_data = Y[1,:].-Y[2,:]
-    diff_pred = y_pred[1,:].-y_pred[2,:]
-    diff = sign.(diff_data.*diff_pred) .* abs.(diff_data.-diff_pred)
+    # score loss:
     loss_score = sum([sum(lossf_scrs.(y_pred[i,:], Y[i,:])) for i in 1:2])
+    # rounded result loss:
+    diff_data = Y[1,:].-Y[2,:]
+    diff_pred = round.(y_pred[1,:]).-round.(y_pred[2,:])
+    diff = sign.(diff_data.*diff_pred) .* abs.(diff_data.-diff_pred)
     loss_result = sum(lossf_res.(diff))
+
+    # Calculate accuracy
     accuracy = sum(diff .≥ 0) / length(diff)
 
     return loss_score .+ loss_result, st, (;accuracy=accuracy)
@@ -115,8 +122,8 @@ function train_model(model, data; epochs=20, batch_size=1024, name="")
     end
 
     # Create output
-    model_trained(id_t1,id_t2,date,is_friendly) = model([id_t1,id_t2,date*(max_date-min_date)+min_date,is_friendly], tstate.parameters, Lux.testmode(tstate.states))[1]
+    model_trained(id_t1,id_t2,date,is_friendly) = model([id_t1,id_t2,(date-min_date)/(max_date-min_date),is_friendly], tstate.parameters, Lux.testmode(tstate.states))[1]
     stats = (;training=(;loss=L_tr,accuracy=Acc_tr),validation=(;loss=L_val,accuracy=Acc_val))
 
-    return model_trained, stats
+    return model_trained, stats, tstate
 end
