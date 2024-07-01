@@ -1,0 +1,233 @@
+---
+layout: default
+title: EURO 2024 Results
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EURO 2024 Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .groups {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .group {
+            margin: 10px;
+            border: 1px solid #ddd;
+            background: white;
+            padding: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .tournament {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .round {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin: 20px 0;
+        }
+        .match {
+            background: white;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>EURO 2024 Results</h1>
+    
+    <h2>Group Stage</h2>
+    <div class="groups">
+        <!-- Group A -->
+        <div class="group">
+            <h3>Group A</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team 1</th>
+                        <th>Score</th>
+                        <th>Team 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Team A1</td>
+                        <td>1-0</td>
+                        <td>Team A2</td>
+                    </tr>
+                    <tr>
+                        <td>Team A3</td>
+                        <td>2-2</td>
+                        <td>Team A4</td>
+                    </tr>
+                    <tr>
+                        <td>Team A1</td>
+                        <td>1-1</td>
+                        <td>Team A3</td>
+                    </tr>
+                    <tr>
+                        <td>Team A2</td>
+                        <td>0-1</td>
+                        <td>Team A4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Group B -->
+        <div class="group">
+            <h3>Group B</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Team 1</th>
+                        <th>Score</th>
+                        <th>Team 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Team B1</td>
+                        <td>0-1</td>
+                        <td>Team B2</td>
+                    </tr>
+                    <tr>
+                        <td>Team B3</td>
+                        <td>3-1</td>
+                        <td>Team B4</td>
+                    </tr>
+                    <tr>
+                        <td>Team B1</td>
+                        <td>0-0</td>
+                        <td>Team B3</td>
+                    </tr>
+                    <tr>
+                        <td>Team B2</td>
+                        <td>2-2</td>
+                        <td>Team B4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Repeat for other groups C, D, etc. -->
+    </div>
+
+    <h2>Finals</h2>
+    <div class="tournament">
+        <!-- Round of 16 -->
+        <div class="round">
+            <h3>Round of 16</h3>
+            <div class="match">
+                <div>Match 1: Team 1 vs Team 2</div>
+                <div>Score</div>
+            </div>
+            <div class="match">
+                <div>Match 2: Team 3 vs Team 4</div>
+                <div>Score</div>
+            </div>
+            <div class="match">
+                <div>Match 3: Team 5 vs Team 6</div>
+                <div>Score</div>
+            </div>
+            <div class="match">
+                <div>Match 4: Team 7 vs Team 8</div>
+                <div>Score</div>
+            </div>
+            <div class="match">
+                <div>Match 5: Team 9 vs Team 10</div>
+                <div>Score</div>
+            </div>
+            <div class="match">
+                <div>Match 6: Team 11 vs Team 12</div>
+                <div>Score</div>
+            </div>
+            <div class="match">
+                <div>Match 7: Team 13 vs Team 14</div>
+                <div>Score</div>
+            </div>
+            <div class="match">
+                <div>Match 8: Team 15 vs Team 16</div>
+                <div>Score</div>
+            </div>
+        </div>
+
+        <!-- Quarter-finals -->
+        <div class="round">
+            <h3>Quarter-finals</h3>
+            <div class="match">
+                <div>Match 9: Winner of Match 1 vs Winner of Match 2</div>
+                <div>Score</div>
+            </div>
+            <div class="match">
+                <div>Match 10: Winner of Match 3 vs Winner of Match 4</div>
+                <div>Score</div>
+            </div>
+            <div class="match">
+                <div>Match 11: Winner of Match 5 vs Winner of Match 6</div>
+                <div>Score</div>
+            </div>
+            <div class="match">
+                <div>Match 12: Winner of Match 7 vs Winner of Match 8</div>
+                <div>Score</div>
+            </div>
+        </div>
+
+        <!-- Semi-finals -->
+        <div class="round">
+            <h3>Semi-finals</h3>
+            <div class="match">
+                <div>Match 13: Winner of Match 9 vs Winner of Match 10</div>
+                <div>Score</div>
+            </div>
+            <div class="match">
+                <div>Match 14: Winner of Match 11 vs Winner of Match 12</div>
+                <div>Score</div>
+            </div>
+        </div>
+
+        <!-- Final -->
+        <div class="round">
+            <h3>Final</h3>
+            <div class="match">
+                <div>Match 15: Winner of Match 13 vs Winner of Match 14</div>
+                <div>Score</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
