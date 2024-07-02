@@ -1,0 +1,18 @@
+header:
+  - titles:
+      # @start locale config
+      en      : &EN       Models
+      # @end locale config
+    url: /pages/models.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       Statistics
+      # @end locale config
+    url: /pages/statistics.html
+
+  - titles:
+      # @start locale config
+      en      : &EN       About
+      # @end locale config
+    url: /pages/about.html
