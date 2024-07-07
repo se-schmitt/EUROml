@@ -1,9 +1,6 @@
 # Script to test model for group stage
-using Dates, JLD2
-
-include("EUROml.jl")
-
-using .EUROml
+include("../src/EUROml.jl")
+using Dates, JLD2, .EUROml
 
 # Load data
 results, scorers, shootouts = EUROml.load_data()

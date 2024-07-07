@@ -1,14 +1,14 @@
 # Load data from results.csv, goalscorers.csv, and shootouts.csv to DataFrames
-function load_data()
-    results = CSV.File("data/results.csv") |> DataFrame
-    scorers = CSV.File("data/goalscorers.csv") |> DataFrame
-    shootouts = CSV.File("data/shootouts.csv") |> DataFrame
+function load_data(;dir=".")
+    results = CSV.File("$dir/data/results.csv") |> DataFrame
+    scorers = CSV.File("$dir/data/goalscorers.csv") |> DataFrame
+    shootouts = CSV.File("$dir/data/shootouts.csv") |> DataFrame
 
     return results, scorers, shootouts
 end
 
 # Convert training data including filtering to make it ready for training
-function convert_data(results, scorers, shootouts)
+function convert_data(results, scorers, shootouts; output=true)
     # Settings
     teams_exclude = ["NA"]
     min_nr_games = 20
@@ -19,7 +19,9 @@ function convert_data(results, scorers, shootouts)
     what_valid_year = year.(results.date) .≥ min_year
     what_games = deepcopy(what_valid_year)
     for i in 1:20
-        println("i: ",i,"; No. teams: ",length(teams))
+        if output
+            println("i: ",i,"; No. teams: ",length(teams))
+        end
         games_per_team = [sum([results.home_team[what_games];results.away_team[what_games]] .== team) for team in teams]
         what_teams = @. games_per_team > min_nr_games && !in(teams,Ref(teams_exclude))
         teams = sort(teams[what_teams])                             # Could be sorted by number of games??
@@ -42,18 +44,11 @@ function convert_data(results, scorers, shootouts)
     data = DataFrame(
         id_home_team = getindex.(Ref(team2id),results.home_team[what_games]),
         id_away_team = getindex.(Ref(team2id),results.away_team[what_games]),
-        home_score = parse.(Int,results.home_score[what_games]),
-        away_score = parse.(Int,results.away_score[what_games]),
+        home_score = results.home_score[what_games],
+        away_score = results.away_score[what_games],
         date = (year.(results.date) .+ dayofyear.(results.date) ./ daysinyear.(results.date))[what_games],
         is_friendly = results.tournament[what_games] .== "Friendly",
     )
-
-    # utils = (;
-    #     teams = teams,
-    #     team2id = team2id,
-    #     games_per_team = games_per_team,
-    #     min_year = min_year
-    # )    
 
     return data, team2id, id2team
 end

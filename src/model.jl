@@ -25,7 +25,7 @@ end
 
 Build a neural network model for predicting football scores.
 """
-function build_model(N_teams::Int)
+function build_model_A(N_teams::Int)
     # Settings
     N_emb = 6
 

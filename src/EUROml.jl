@@ -5,8 +5,8 @@ module EUROml
     closeall()
 
     # ML model
-    include("src/model.jl")
-    include("src/load_data.jl")
+    include("model.jl")
+    include("load_data.jl")
 
     # App/Website
 end
