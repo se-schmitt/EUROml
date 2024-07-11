@@ -51,7 +51,7 @@ title: Model A
       </tr>
       {% for row in site.data.model_A.groupA %}
         <tr>
-          <td><img src="/images/{{row.home_team}}.png"> vs. <img src="/images/{{row.away_team}}.webp"></td>
+          <td><img src="images/{{row.home_team}}.png"> vs. <img src="images/{{row.away_team}}.webp"></td>
           <td>{{row.result_home}}:{{row.result_away}}</td>
           <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
         </tr>
@@ -71,7 +71,7 @@ title: Model A
       </tr>
       {% for row in site.data.model_A.groupB %}
         <tr>
-          <td><img src="/images/{{row.home_team}}.webp"> vs. <img src="/images/{{row.away_team}}.webp"></td>
+          <td><img src="images/{{row.home_team}}.webp"> vs. <img src="images/{{row.away_team}}.webp"></td>
           <td>{{row.result_home}}:{{row.result_away}}</td>
           <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
         </tr>
@@ -91,7 +91,7 @@ title: Model A
       </tr>
       {% for row in site.data.model_A.groupC %}
         <tr>
-          <td><img src="/images/{{row.home_team}}.webp"> vs. <img src="/images/{{row.away_team}}.webp"></td>
+          <td><img src="images/{{row.home_team}}.webp"> vs. <img src="images/{{row.away_team}}.webp"></td>
           <td>{{row.result_home}}:{{row.result_away}}</td>
           <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
         </tr>
@@ -111,7 +111,7 @@ title: Model A
       </tr>
       {% for row in site.data.model_A.groupD %}
         <tr>
-          <td><img src="/images/{{row.home_team}}.webp"> vs. <img src="/images/{{row.away_team}}.webp"></td>
+          <td><img src="images/{{row.home_team}}.webp"> vs. <img src="images/{{row.away_team}}.webp"></td>
           <td>{{row.result_home}}:{{row.result_away}}</td>
           <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
         </tr>
@@ -131,7 +131,7 @@ title: Model A
       </tr>
       {% for row in site.data.model_A.groupE %}
         <tr>
-          <td><img src="/images/{{row.home_team}}.webp"> vs. <img src="/images/{{row.away_team}}.webp"></td>
+          <td><img src="images/{{row.home_team}}.webp"> vs. <img src="images/{{row.away_team}}.webp"></td>
           <td>{{row.result_home}}:{{row.result_away}}</td>
           <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
         </tr>
@@ -151,7 +151,7 @@ title: Model A
       </tr>
       {% for row in site.data.model_A.groupF %}
         <tr>
-          <td><img src="/images/{{row.home_team}}.webp"> vs. <img src="/images/{{row.away_team}}.webp"></td>
+          <td><img src="images/{{row.home_team}}.webp"> vs. <img src="images/{{row.away_team}}.webp"></td>
           <td>{{row.result_home}}:{{row.result_away}}</td>
           <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
         </tr>
@@ -171,7 +171,7 @@ title: Model A
     </tr>
     {% for row in site.data.model_A.roundof16 %}
       <tr>
-        <td><img src="/images/{{row.home_team}}.webp"> vs. <img src="/images/{{row.away_team}}.webp"></td>
+        <td><img src="images/{{row.home_team}}.webp"> vs. <img src="images/{{row.away_team}}.webp"></td>
         <td>{{row.result_home}}:{{row.result_away}}</td>
         <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
       </tr>
@@ -188,7 +188,7 @@ title: Model A
     </tr>
     {% for row in site.data.model_A.quarterfinals %}
       <tr>
-        <td><img src="/images/{{row.home_team}}.webp"> vs. <img src="/images/{{row.away_team}}.webp"></td>
+        <td><img src="images/{{row.home_team}}.webp"> vs. <img src="images/{{row.away_team}}.webp"></td>
         <td>{{row.result_home}}:{{row.result_away}}</td>
         <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
       </tr>
@@ -205,7 +205,7 @@ title: Model A
     </tr>
     {% for row in site.data.model_A.semifinals %}
       <tr>
-        <td><img src="/images/{{row.home_team}}.webp"> vs. <img src="/images/{{row.away_team}}.webp"></td>
+        <td><img src="images/{{row.home_team}}.webp"> vs. <img src="images/{{row.away_team}}.webp"></td>
         <td>{{row.result_home}}:{{row.result_away}}</td>
         <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
       </tr>
@@ -222,7 +222,7 @@ title: Model A
     </tr>
     {% for row in site.data.model_A.final %}
       <tr>
-        <td><img src="/images/{{row.home_team}}.webp"> vs. <img src="/images/{{row.away_team}}.webp"></td>
+        <td><img src="images/{{row.home_team}}.webp"> vs. <img src="images/{{row.away_team}}.webp"></td>
         <td>{{row.result_home}}:{{row.result_away}}</td>
         <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
       </tr>
@@ -236,4 +236,4 @@ title: Model A
 
 ### Training 
 
-![Training](/images/model_A.png)
+![Training](images/model_A.png)
