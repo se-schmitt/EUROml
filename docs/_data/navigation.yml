@@ -10,9 +10,4 @@ header:
       en      : &EN       Statistics
       # @end locale config
     url: /pages/statistics.html
-
-  - titles:
-      # @start locale config
-      en      : &EN       About
-      # @end locale config
-    url: /pages/about.html
+    
