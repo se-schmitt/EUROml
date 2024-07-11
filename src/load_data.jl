@@ -7,6 +7,9 @@ function load_data(;dir=".")
     return results, scorers, shootouts
 end
 
+# Convert date to year Float
+year2float(date) = year(date) + dayofyear(date) / daysinyear(date)
+
 # Convert training data including filtering to make it ready for training
 function convert_data(results, scorers, shootouts; output=true)
     # Settings
@@ -46,7 +49,7 @@ function convert_data(results, scorers, shootouts; output=true)
         id_away_team = getindex.(Ref(team2id),results.away_team[what_games]),
         home_score = results.home_score[what_games],
         away_score = results.away_score[what_games],
-        date = (year.(results.date) .+ dayofyear.(results.date) ./ daysinyear.(results.date))[what_games],
+        date = year2float.(results.date)[what_games],
         is_friendly = results.tournament[what_games] .== "Friendly",
     )
 

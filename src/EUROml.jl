@@ -1,5 +1,5 @@
 module EUROml
-    using DataFrames, CSV, Dates, Plots
+    using DataFrames, CSV, DelimitedFiles, Dates, Plots
     using Lux, MLUtils, Optimisers, LossFunctions, Zygote, Random
     const Lexp = Lux.Experimental
     closeall()
@@ -9,4 +9,5 @@ module EUROml
     include("load_data.jl")
 
     # App/Website
+    include("predict_games.jl")
 end
