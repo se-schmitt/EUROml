@@ -5,10 +5,6 @@ title: Model A
 
 <!-- # Model A -->
 
-## Overview
-
-## Group stage
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -37,6 +33,9 @@ title: Model A
   </style>
 </head>
 <body>
+
+<h2>Group stage</h2>
+
   <div class="table-container">
     <!-- Group A -->
     <table>
@@ -52,7 +51,7 @@ title: Model A
       </tr>
       {% for row in site.data.model_A.groupA %}
         <tr>
-          <td><img src="/images/{{row.home_team}}.webp"> vs. <img src="/images/{{row.away_team}}.webp"></td>
+          <td><img src="/images/{{row.home_team}}.png"> vs. <img src="/images/{{row.away_team}}.webp"></td>
           <td>{{row.result_home}}:{{row.result_away}}</td>
           <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
         </tr>
@@ -232,3 +231,9 @@ title: Model A
 
 </body>
 </html>
+
+## Statistics
+
+### Training 
+
+![Training](/images/model_A.png)
