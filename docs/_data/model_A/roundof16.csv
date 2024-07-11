@@ -1,0 +1,9 @@
+home_team,away_team,date,pred_home,pred_away,result_home,result_away,color
+Switzerland,Italy,2024-06-29,1,1,2,0,red
+Germany,Denmark,2024-06-29,2,1,2,0,blue
+England,Slovakia,2024-06-30,2,1,2,1,lime
+Spain,Georgia,2024-06-30,2,1,4,1,blue
+France,Belgium,2024-07-01,2,1,1,0,green
+Portugal,Slovenia,2024-07-01,3,1,0,0,red
+Romania,Netherlands,2024-07-02,1,2,0,3,blue
+Austria,Turkey,2024-07-02,1,1,1,2,red

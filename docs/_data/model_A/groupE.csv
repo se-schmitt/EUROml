@@ -1,0 +1,7 @@
+home_team,away_team,date,pred_home,pred_away,result_home,result_away,color
+Romania,Ukraine,2024-06-17,1,1,3,0,red
+Belgium,Slovakia,2024-06-17,2,1,0,1,red
+Slovakia,Ukraine,2024-06-21,1,1,1,2,red
+Belgium,Romania,2024-06-22,2,1,2,0,blue
+Slovakia,Romania,2024-06-26,1,1,1,1,lime
+Ukraine,Belgium,2024-06-26,1,1,0,0,green

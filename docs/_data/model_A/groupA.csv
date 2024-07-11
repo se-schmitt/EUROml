@@ -1,0 +1,7 @@
+home_team,away_team,date,pred_home,pred_away,result_home,result_away,color
+Germany,Scotland,2024-06-14,2,1,5,1,blue
+Hungary,Switzerland,2024-06-15,1,1,1,3,red
+Germany,Hungary,2024-06-19,2,1,2,0,blue
+Scotland,Switzerland,2024-06-19,1,1,1,1,lime
+Germany,Switzerland,2024-06-23,2,1,1,1,red
+Scotland,Hungary,2024-06-23,1,1,0,1,red

@@ -1,0 +1,7 @@
+home_team,away_team,date,pred_home,pred_away,result_home,result_away,color
+Poland,Netherlands,2024-06-16,1,2,1,2,lime
+Austria,France,2024-06-17,1,2,0,1,green
+Poland,Austria,2024-06-21,1,1,1,3,red
+Netherlands,France,2024-06-21,1,1,0,0,green
+Netherlands,Austria,2024-06-25,2,1,2,3,red
+France,Poland,2024-06-25,2,1,1,1,red

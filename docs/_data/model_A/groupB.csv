@@ -1,0 +1,7 @@
+home_team,away_team,date,pred_home,pred_away,result_home,result_away,color
+Spain,Croatia,2024-06-15,2,1,3,0,blue
+Italy,Albania,2024-06-15,2,1,2,1,lime
+Croatia,Albania,2024-06-19,2,1,2,2,red
+Spain,Italy,2024-06-20,2,1,1,0,green
+Albania,Spain,2024-06-24,1,2,0,1,green
+Croatia,Italy,2024-06-24,1,1,1,1,lime

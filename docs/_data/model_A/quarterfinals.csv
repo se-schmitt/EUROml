@@ -1,0 +1,5 @@
+home_team,away_team,date,pred_home,pred_away,result_home,result_away,color
+Germany,Spain,2024-07-05,1,1,1,2,red
+Portugal,France,2024-07-05,1,1,0,0,green
+England,Switzerland,2024-07-06,2,1,1,1,red
+Netherlands,Turkey,2024-07-06,2,1,2,1,lime

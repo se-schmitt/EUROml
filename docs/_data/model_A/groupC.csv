@@ -1,0 +1,7 @@
+home_team,away_team,date,pred_home,pred_away,result_home,result_away,color
+Slovenia,Denmark,2024-06-16,1,2,1,1,red
+Serbia,England,2024-06-16,1,1,0,1,red
+Slovenia,Serbia,2024-06-20,1,1,1,1,lime
+Denmark,England,2024-06-20,1,1,1,1,lime
+England,Slovenia,2024-06-25,2,1,0,0,red
+Denmark,Serbia,2024-06-25,1,1,0,0,green
