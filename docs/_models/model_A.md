@@ -234,8 +234,15 @@ title: Model A
 
 ## Statistics
 
+### Model
+
+
+
 ### Training 
 
 ![Training](results/model_A.png)
 
-test
+Legend:
+- <span style="color:blue">training loss</span>
+- <span style="color:deepskyblue">validation loss</span>
+- <span style="color:red">validation accuracy</span> (accuracy: ratio of right tendency)
