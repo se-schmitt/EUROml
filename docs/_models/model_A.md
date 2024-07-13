@@ -51,7 +51,7 @@ title: Model A
       </tr>
       {% for row in site.data.model_A.groupA %}
         <tr>
-          <td><img src="flags/{{row.home_team}}.png"> vs. <img src="flags/{{row.away_team}}.webp"></td>
+          <td><img src="flags/{{row.home_team}}.webp"> vs. <img src="flags/{{row.away_team}}.webp"></td>
           <td>{{row.result_home}}:{{row.result_away}}</td>
           <td><p style="color:{{row.color}}">{{row.pred_home}}:{{row.pred_away}}</p></td>
         </tr>
