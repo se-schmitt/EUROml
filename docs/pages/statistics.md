@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Statistics
 ---
 
-# Statistics
+To be done...

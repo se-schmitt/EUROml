@@ -3,5 +3,5 @@ layout: articles
 title: Models
 articles:
   data_source: models
-  show_excerpt: true
+  show_excerpt: false
 ---

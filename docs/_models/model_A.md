@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Model A
+title: Model "First Try"
 ---
 
-<!-- # Model A -->
+## Results
 
 <html lang="en">
 <head>
@@ -30,11 +30,34 @@ title: Model A
       margin-left: auto;
       margin-right: auto;
     }
+    .tb2 {
+      width: 33%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      border: 1px solid #ccc;
+      padding: 4px;
+    }
+    li {
+      margin-left: 20px;
+      padding-left: 10px;
+    }
   </style>
 </head>
 <body>
 
-<h2>Group stage</h2>
+<h3>Overview</h3>
+
+<table class="tb2">
+  {% for row in site.data.model_A.statistics %}
+    <tr>
+      <td><b>{{row.key}}:</b></td>
+      <td>{{row.value}}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<h3>Group stage</h3>
 
   <div class="table-container">
     <!-- Group A -->
@@ -159,8 +182,6 @@ title: Model A
     </table>
   </div>
 
-<h2>Finals</h2>
-
 <h3>Round of 16</h3>
 
   <table class="tb">
@@ -232,15 +253,17 @@ title: Model A
 </body>
 </html>
 
-## Statistics
+## Overview
 
-### Model
+- Results are a little boring (only 2:1, 1:1, and 1:2)
 
-
+Could be improved by
+- modified loss function that enhances the influence of the score difference
+- different rounding of the final scores (in evaluation and loss function)
 
 ### Training 
 
-![Training](results/model_A.png)
+<div style="text-align:center"> <img src="results/model_A.png" alt="Training" width="70%"> </div>
 
 Legend:
 - <span style="color:blue">training loss</span>
